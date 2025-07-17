@@ -1,23 +1,27 @@
 import { useState, useEffect } from "react";
 
-interface Coin {
-  id: string;
-  name: string;
-  symbol: string;
-  price: number;
-}
-
-export default function useCoinData() {
-  const [coins, setCoins] = useState<Coin[]>([]);
+export function useCoinData() {
+  const [coinData, setCoinData] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const mockCoins = [
-      { id: "bitcoin", name: "Bitcoin", symbol: "BTC", price: 30000 },
-      { id: "ethereum", name: "Ethereum", symbol: "ETH", price: 2000 },
-      { id: "dogecoin", name: "Dogecoin", symbol: "DOGE", price: 0.25 },
-    ];
-    setCoins(mockCoins);
+    fetch(
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+    )
+      .then((res) => {
+        if (!res.ok) throw new Error("Network response was not ok");
+        return res.json();
+      })
+      .then((data) => {
+        setCoinData(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
   }, []);
 
-  return coins;
+  return { coinData, loading, error };
 }
