@@ -11,7 +11,7 @@ function App() {
       <header className="flex items-center justify-center mb-8">
         <img src={blocksenseLogo} alt="Blocksense Logo" className="h-10 mr-3" />
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 uppercase tracking-wide">
-          Top 100 Price Tracker
+          Blocksense Top 100 Price Tracker
         </h1>
       </header>
 
