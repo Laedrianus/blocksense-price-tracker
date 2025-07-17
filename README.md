@@ -73,66 +73,20 @@ To lay the groundwork for future testnet deployments and developer onboarding
 | Routing    | React Router DOM              |
 | Hosting    | Vercel                        |
 
----
-
-## 📂 Folder Structure
-blocksense-price-tracker/
-│
-├── public/ # Static assets
-├── src/
-│ ├── assets/ # Images (e.g., logo)
-│ ├── components/ # Reusable UI components
-│ ├── hooks/ # Custom data-fetching hook
-│ ├── pages/ # Home & Custom Feed Creator
-│ └── App.tsx # Main routing file
-│
-├── package.json
-└── README.md
-
-
----
-
-## 🛠️ Installation & Usage
-
-### Prerequisites
-
-- Node.js >= 18
-- Git
-- (Optional) Vercel CLI
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Laedrianus/blocksense-price-tracker.git
-cd blocksense-price-tracker
-
-2. Install Dependencies
-npm install
-
-3. Start Development Server
-npm run dev
-
-Visit http://localhost:5173 in your browser.
-
-4. Build for Production
-npm run build
-
-Deploy
-You can deploy this project on Vercel (recommended):
-
-Go to vercel.com
-Connect your GitHub repo
-Set the root directory if needed (e.g. /)
-Click Deploy
 
 Future Plans
 Replace CoinGecko with native Blocksense endpoints
+
 Add real-time depeg alerts using oracle triggers
+
 Allow users to publish custom feeds to testnets
+
 Extend UI to show trust levels and consensus states
 
 📄 License
 MIT — free to use, modify, and build upon.
 
-For contact: Discord: https://discord.gg/K4sqACWQ
+For contact: 
+Discord: https://discord.gg/K4sqACWQ
+
 X: @bilenls
