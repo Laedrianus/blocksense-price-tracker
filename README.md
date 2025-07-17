@@ -1,14 +1,27 @@
 # 🧠 Blocksense Price Tracker & Simulate Your Own Feed
 
-A lightweight educational dApp demonstrating how **peg-aware oracles** can improve reliability in DeFi pricing — built as part of the **Blocksense** ecosystem.
+What’s the Purpose?
 
-> This project simulates the concept of peg-aware feeds using real-time data from [CoinGecko](https://coingecko.com), until official Blocksense endpoints become publicly available.
+The Blocksense Price Tracker & Simulate Your Own Feed dApp is designed to help users understand how peg-aware oracle infrastructure works—both through real price data and an interactive simulation.
+
+🔹 The Price Tracker section displays real crypto asset prices synced with the Blocksense oracle infrastructure, demonstrating how reliable on-chain data feeds are delivered.
+
+🔹 The Simulate Your Own Feed section provides an educational interface where users can create their own simulated price feeds using dummy data. While no real data is transmitted on-chain, it allows users to intuitively grasp how oracle systems are structured and function.
+
+This dApp serves as a simple yet powerful tool for both developers and DeFi enthusiasts to explore how Blocksense’s peg-aware technology works in practice and why it matters.
 
 ---
 
-## 🔍 What is Blocksense?
+⚠️ Current Limitations
 
-Blocksense is a decentralized oracle network that enables secure, reliable, and peg-aware data feeds for smart contracts. It ensures data accuracy and consistency across chains, helping prevent price manipulation and depeg incidents. Blocksense supports modular oracle architecture, on-chain consensus, and real-time reporting.
+🔐 Blocksense oracle API is not yet publicly accessible.
+
+Currently, price data is fetched via the CoinGecko API.
+
+🤖 The "Custom Feed Creator" page simulates feed logic but does not submit to a real oracle network yet.
+These will be replaced with actual Blocksense endpoints once available.
+
+--- However, the dApp is structurally ready. ---
 
 ---
 
@@ -111,12 +124,6 @@ Go to vercel.com
 Connect your GitHub repo
 Set the root directory if needed (e.g. /)
 Click Deploy
-
-⚠️ Current Limitations
-🔐 Blocksense oracle API is not yet publicly accessible.
-Currently, price data is fetched via the CoinGecko API.
-🤖 The "Custom Feed Creator" page simulates feed logic but does not submit to a real oracle network yet.
-These will be replaced with actual Blocksense endpoints once available.
 
 Future Plans
 Replace CoinGecko with native Blocksense endpoints
