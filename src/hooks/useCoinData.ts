@@ -1,28 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-export function useCoinData() {
-  const [coinData, setCoinData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+interface Coin {
+  id: string;
+  name: string;
+  symbol: string;
+  price: number;
+}
+
+export default function useCoinData() {
+  const [coins, setCoins] = useState<Coin[]>([]);
 
   useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      try {
-        const res = await fetch(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-        );
-        if (!res.ok) throw new Error("Network response was not ok");
-        const data = await res.json();
-        setCoinData(data);
-      } catch (err) {
-        setError(err.message || "Something went wrong");
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
+    const mockCoins = [
+      { id: "bitcoin", name: "Bitcoin", symbol: "BTC", price: 30000 },
+      { id: "ethereum", name: "Ethereum", symbol: "ETH", price: 2000 },
+      { id: "dogecoin", name: "Dogecoin", symbol: "DOGE", price: 0.25 },
+    ];
+    setCoins(mockCoins);
   }, []);
 
-  return { coinData, loading, error };
+  return coins;
 }
