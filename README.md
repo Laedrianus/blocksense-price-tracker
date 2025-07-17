@@ -1,69 +1,76 @@
-# React + TypeScript + Vite
+TOP 100 Blocksense Price Tracker 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Blocksense Logo](./src/assets/blocksense-logo.png)
 
-Currently, two official plugins are available:
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Blocksense Price Tracker is a modern, responsive web application designed to track real-time prices of the top 100 cryptocurrencies. Currently, it fetches data from the CoinGecko API, with plans to integrate Blocksense Oracle infrastructure for peg-aware price feeds in the future.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Real-time prices of the top 100 cryptocurrencies  
+- Responsive, modern, card-based minimalist design  
+- Blocksense branding with logo integration  
+- User-friendly grid layout (5 columns, 20 rows)  
+- Ready for future integration with Blocksense oracle data  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Requirements
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js (v16 or higher)  
+- npm or yarn
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/blocksense-price-tracker.git
+   cd blocksense-price-tracker
+
+2. Install dependencies:
+
+   npm install
+
+3. Start the development server:
+
+   npm run dev
+
+4. Open in your browser:
+
+   http://localhost:3000
+
+  	
+
+	Project Structure
+
+	src/
+	├── assets/                # Logos and images
+	├── components/            # React components (e.g., PriceCard)
+	├── hooks/                 # Custom React hooks (e.g., useCoinData)
+	├── App.tsx                # Main app component
+	└── main.tsx               # Entry point
+
+
+Blocksense Integration
+Currently, data is fetched from the CoinGecko API.
+
+Future plans include integration with Blocksense Oracle API for real-time, peg-aware price data.
+
+Oracle data validation and trigger mechanisms are planned.
+
+Contributing
+Feel free to fork the repo and add new features or fix bugs.
+
+Please provide feedback via Issues.
+
+License
+MIT License © 2025
+
+Contact
+For questions or support, Blocksense Discord: https://discord.gg/K4sqACWQ
