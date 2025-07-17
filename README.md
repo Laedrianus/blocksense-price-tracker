@@ -73,4 +73,4 @@ License
 MIT License © 2025
 
 Contact
-For questions or support, Blocksense Discord: https://discord.gg/K4sqACWQ
+For questions or support, Blocksense Discord: https://discord.gg/K4sqACWQ 
